@@ -15,8 +15,8 @@ if (!empty($title) && !empty($content)) {
     $sql = 'UPDATE pages SET title=:title, content=:content WHERE id = :id';
     $statement = $pdo->prepare($sql);
     $statement->bindValue(':id', $id, PDO::PARAM_INT);
-    $statement->bindValue(':title', $titlle, PDO::PARAM_STR);
-    $statement->bindValue(':content', $contents, PDO::PARAM_STR);
+    $statement->bindValue(':title', $title, PDO::PARAM_STR);
+    $statement->bindValue(':content', $content, PDO::PARAM_STR);
     $statement->execute();
 
     header('Location: ./index.php');
