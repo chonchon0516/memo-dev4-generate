@@ -7,6 +7,7 @@ $pdo = new PDO(
     $dbPassword
 );
 
+
 $id = filter_input(INPUT_POST, 'id');
 $title = filter_input(INPUT_POST, 'title');
 $content = filter_input(INPUT_POST, 'content');
